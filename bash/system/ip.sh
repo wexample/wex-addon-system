@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 systemIp() {
-  if [ "$(wex docker/isToolBox)" = true ];then
-    wex docker/ip
+  if [ "$(wex-exec docker/isToolBox)" = true ];then
+    wex-exec docker/ip
     return
   fi
   # Enforce language for parsing.

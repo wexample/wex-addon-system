@@ -31,5 +31,5 @@ systemPathAdd() {
   command=$(sed -e 's/[]\/$\{0,\}.^|[]/\\&/g' <<< "${command}")${NEW_PATH}
 
   # Add to bashrc.
-  wex file/textAppendOnce -f="${BASHRC_PATH}" -l="${command}"
+  wex-exec file/textAppendOnce -f="${BASHRC_PATH}" -l="${command}"
 }

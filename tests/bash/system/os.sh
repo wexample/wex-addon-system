@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 systemOsTest() {
-  _wexTestAssertEqual "$(wex system/os)" "linux"
+  _wexTestAssertEqual "$(wex-exec system/os)" "linux"
 }

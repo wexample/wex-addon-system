@@ -8,7 +8,7 @@ systemIp() {
   # Enforce language for parsing.
   export LC_ALL=C
   # May have several IP's
-  IPS=($(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'))
+  IPS=($(ip addr show | awk '/inet /{print $2}' | cut -d'/' -f1 | grep -v '127.0.0.1'))
   # Revert to default language.
   unset LC_ALL
   # Take the last one

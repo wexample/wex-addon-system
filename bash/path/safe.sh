@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 pathSafeArgs() {
+  # shellcheck disable=SC2034
   _ARGUMENTS=(
     'path_name p "Path" true'
   )

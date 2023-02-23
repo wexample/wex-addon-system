@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 packageExistsArgs() {
+  # shellcheck disable=SC2034
   _ARGUMENTS=(
     'name n "Package name to find" true'
   )

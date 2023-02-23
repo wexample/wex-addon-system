@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 systemPathAddArgs() {
- _ARGUMENTS=(
+ # shellcheck disable=SC2034
+  _ARGUMENTS=(
    'new_path p "New path" true'
    'bashrc_path b "Bashrc path" false'
  )

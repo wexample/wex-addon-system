@@ -8,7 +8,7 @@ systemIp() {
   # Enforce language for parsing.
   export LC_ALL=C
   # May have several IP's
-  IPS=($(ip addr show | awk '/inet /{print $2}' | cut -d'/' -f1 | grep -v '127.0.0.1'))
+  IPS=($(ip route get 1.1.1.1 | sed -n 's/.* src \([^[:space:]]*\) .*/\1/p'))
   # Revert to default language.
   unset LC_ALL
   # Take the last one

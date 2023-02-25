@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 pathSafeArgs() {
+  _DESCRIPTION="Return true if path is not a well known risky path"
   # shellcheck disable=SC2034
   _ARGUMENTS=(
     'path_name p "Path" true'

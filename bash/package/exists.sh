@@ -10,16 +10,16 @@ packageExistsArgs() {
 packageExists() {
   # Prevent empty value.
   if [ "${NAME}" == "true" ] || [ "${NAME}" == "" ]; then
-    echo false;
+    echo false
     return
-  fi;
+  fi
 
   # Method works both on linux and windows.
   hash ${NAME} 2>/dev/null
   AVAILABLE=$?
   if [ ${AVAILABLE} -eq 0 ]; then
     echo true
-   else
+  else
     echo false
-  fi;
+  fi
 }

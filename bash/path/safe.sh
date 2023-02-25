@@ -9,16 +9,16 @@ pathSafeArgs() {
 
 pathSafe() {
   # Os is windows
-  if [ "$(wex-exec system/os)" = "windows" ];then
+  if [ "$(wex-exec system/os)" = "windows" ]; then
     local FIRST_LETTER
     FIRST_LETTER="$(echo "${PATH_NAME}" | head -c 1)"
 
     # Path is not already converted.
-    if [ "${FIRST_LETTER}" = "/" ];then
-      wex-exec path/posixToWindows -p="${PATH_NAME}";
+    if [ "${FIRST_LETTER}" = "/" ]; then
+      wex-exec path/posixToWindows -p="${PATH_NAME}"
       return
-    fi;
-  fi;
+    fi
+  fi
 
-  echo "${PATH_NAME}";
+  echo "${PATH_NAME}"
 }

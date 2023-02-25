@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 systemIp() {
-  if [ "$(wex-exec docker/isToolBox)" = true ];then
+  if [ "$(wex-exec docker/isToolBox)" = true ]; then
     wex-exec docker/ip
     return
   fi

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 fileWritableArgs() {
- # shellcheck disable=SC2034
+  # shellcheck disable=SC2034
   _ARGUMENTS=(
-   'file f "File" true'
- )
+    'file f "File" true'
+  )
 }
 
 fileWritable() {

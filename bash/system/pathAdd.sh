@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 systemPathAddArgs() {
+  _DESCRIPTION="Add a path to the PATH"
   # shellcheck disable=SC2034
   _ARGUMENTS=(
     'new_path p "New path" true'

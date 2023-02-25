@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 portUsedArgs() {
+  _DESCRIPTION="Return true if given port is used"
   # shellcheck disable=SC2034
   _ARGUMENTS=(
     'port_number p "Port number" true'

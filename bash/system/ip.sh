@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+systemIpArgs() {
+  # shellcheck disable=SC2034
+  _DESCRIPTION="Return the local IP"
+}
+
 systemIp() {
   if [ "$(wex-exec docker/isToolBox)" = true ]; then
     wex-exec docker/ip

@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+systemOsArgs() {
+  # shellcheck disable=SC2034
+  _DESCRIPTION="Return the local OS name"
+}
+
 systemOs() {
   case "$(uname -s)" in
   Darwin)

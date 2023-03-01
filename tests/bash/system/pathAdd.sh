@@ -8,7 +8,7 @@ systemPathAddTest() {
   NEW_PATH=/toto/tata
 
   FILEPATH=$(_wexTestSampleInit bashrc)
-  COMMAND=$(wex-exec system/pathAdd -p=${NEW_PATH} -b="${FILEPATH}" -g="Lorem ipsum")
+  COMMAND=$(wex-exec system/pathAdd -p=${NEW_PATH} -b="${FILEPATH}")
   _wexTestSampleDiff bashrc true "Command added to test bashrc file"
 
   _wexTestAssertNotEmpty "${COMMAND}"
